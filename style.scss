@@ -502,3 +502,83 @@ $objectFits: cover, contain, fill, none, scale-down;
 .sticky {
     position: sticky;
 }
+
+.mck-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 60px 80px;
+    background: #eef2f5;
+    gap: 40px;
+    pos-relative: relative;
+
+    &__left {
+        max-width: 420px;
+    }
+
+    &__right {
+        position: relative;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 480px;
+    }
+
+    &__bg-rect {
+        position: absolute;
+        top: -40px;
+        right: -60px;
+        width: 55%;
+        height: 85%;
+        background: $navy;
+        z-index: 0;
+        border-radius: 2px;
+    }
+
+    &__img {
+        position: relative;
+        z-index: 1;
+        width: 75%;
+        height: 460px;
+        object-fit: cover;
+        border-radius: 2px;
+        margin-right: 40px;
+    }
+
+    &__dots-tl {
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        z-index: 0;
+        display: grid;
+        grid-template-columns: repeat(6, 8px);
+        gap: 6px;
+
+        span {
+            width: 4px;
+            height: 4px;
+            background: #b0bec5;
+            border-radius: 50%;
+            display: block;
+        }
+    }
+
+    &__dots-br {
+        position: absolute;
+        bottom: -20px;
+        right: 20px;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(6, 8px);
+        gap: 6px;
+
+        span {
+            width: 4px;
+            height: 4px;
+            background: #b0bec5;
+            border-radius: 50%;
+            display: block;
+        }
+    }
+}
